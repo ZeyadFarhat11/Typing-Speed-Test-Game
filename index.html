@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="header">typing speed test game</h1>
+      <div class="container">
+        <div class="info box">
+          You are playing on
+          <span class="level">[normal]</span>
+          level & you have
+          <span>[3]</span>
+          seconds to type word
+        </div>
+        <div class="play-btn box">start playing</div>
+        <div class="current-word box" style="display: none"></div>
+        <input
+          type="text"
+          class="writing-input box"
+          placeholder="Write Here"
+          style="display: none"
+        />
+
+        <select class="level-selector box">
+          <option value="easy" data-level="easy">easy</option>
+          <option value="normal" selected data-level="normal">normal</option>
+          <option value="hard" data-level="hard">hard</option>
+        </select>
+
+        <div class="words box">
+          <p>words will appear here</p>
+        </div>
+        <div class="status box">
+          <p>time left: <span id="time-left">3s</span></p>
+          <p style="text-align: start">
+            Score: <span id="score">0</span> from: <span id="max-score">42</span
+            ><br />wins: <span id="wins">0</span>
+          </p>
+        </div>
+        <p id="msg"></p>
+      </div>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: .3s;
+    text-transform: capitalize;
+}
+:root {
+    --white: #fff;
+    --header-background: #03A9F4;
+    --words-background: #009688;
+    --box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    --btn-background: #009688;
+    --info-color: #1BC44E;
+}
+body main {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'open sans', sans-serif;
+}
+main h1.header {
+    width: 100%;
+    height: 80px;
+    display: grid;
+    place-items: center;
+    background-color: #03A9F4;
+    color: #fff;
+}
+.box {
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.5;
+}
+.container {
+    max-width: 1000px;
+    padding: 15px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.info span {
+    color: var(--info-color);
+}
+
+.play-btn {
+    background-color: var(--btn-background);
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.current-word {
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: var(--words-background);
+    font-weight: bold;
+}
+
+.writing-input {
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+}
+
+select {
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: var(--header-background);
+    appearance: none;
+    padding: 10px !important;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    font-weight: bold;
+}
+.words span {
+    background-color: var(--words-background);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.words p {
+    font-size: 20px;
+    color: #777;
+}
+.words.active p {
+    display: none;
+}
+.words.active {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.status span {
+    color: var(--info-color);
+}
+
+#msg {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    transition: 0s;
+}
+#msg.success {
+    color:green;
+}
+#msg.failed {
+    color: red;
+}
+
+@media (max-width: 700px) {
+    .header {
+        font-size: 20px;
+    }
+    .info {
+        font-size: 14px;
+    }
+    .play-btn {
+        font-size: 22px;
+    }
+    select {
+        font-size: 18px;
+    }
+    .words {
+        font-size: 16px;
+    }
+    .words p {
+        font-size: 16px;
+    }
+    .status {
+        font-size: 13px;
+    } 
+}
